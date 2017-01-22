@@ -74,8 +74,7 @@ namespace TimeTrackingHelper
             {
                 session = new Session();
                 session.StartSessionPart(SessionPartType.Work);
-                currentStatusForm=new CurrentStatus(session);
-                currentStatusForm.Show();
+                InitCurrentStatusForm();
             }
             else
             {
@@ -86,6 +85,12 @@ namespace TimeTrackingHelper
 
             UpdateTable();
 
+        }
+
+        private void InitCurrentStatusForm()
+        {
+            currentStatusForm = new CurrentStatus(session);
+            currentStatusForm.Show();
         }
 
         private void butPauseControl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -106,6 +111,8 @@ namespace TimeTrackingHelper
         {
             timerUIUpdate.Start();
             session = IOManager.LoadLastSession();
+            if (session != null)
+                InitCurrentStatusForm();
         }
     }
 }

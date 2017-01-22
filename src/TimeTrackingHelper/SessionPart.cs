@@ -42,10 +42,4 @@ namespace TimeTrackingHelper
             return GetElapsedTime();
         }
     }
-
-    public enum SessionPartType
-    {
-        Work,
-        Rest
-    }
 }

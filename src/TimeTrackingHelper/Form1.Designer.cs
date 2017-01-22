@@ -312,7 +312,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "TimeTrackingHelper";
-            this.Text = "Form1";
+            this.Text = "Time Tracking Helper";
             this.Shown += new System.EventHandler(this.TimeTrackingHelper_Shown);
             this.SizeChanged += new System.EventHandler(this.TimeTrackingHelper_SizeChanged);
             this.ResumeLayout(false);
